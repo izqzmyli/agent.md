@@ -1,0 +1,101 @@
+# CLAUDE.md
+
+<!--
+Agent Operating Manual
+
+Purpose:
+This file gives Claude Code project-specific operating rules.
+Keep it short. Long instructions consume context and may reduce performance.
+
+How to use:
+1. Copy this file to the root of your repository as CLAUDE.md.
+2. Fill only the sections that matter.
+3. Delete unused sections.
+4. Keep the final file preferably under 150-200 lines.
+-->
+
+## Project
+
+Name: [PROJECT_NAME]
+
+Type: [frontend | backend | fullstack | library | CLI | mobile | WordPress | other]
+
+Stack:
+- Language: [e.g. TypeScript, Python, PHP]
+- Framework: [e.g. Next.js, FastAPI, Laravel, WordPress]
+- Package manager: [npm | pnpm | yarn | uv | poetry | composer | other]
+- Test runner: [e.g. Vitest, Jest, Pytest, PHPUnit]
+
+Primary goal:
+[One short sentence describing what this project does.]
+
+---
+
+## Operating Principles
+
+Follow these rules in every task:
+
+1. Solve the user's current task only.
+2. Use the smallest safe change.
+3. Do not refactor unrelated code.
+4. Do not reformat unrelated files.
+5. Do not add dependencies unless necessary.
+6. Prefer existing project patterns.
+7. Read only the files needed for the task.
+8. Ask only when blocked; otherwise make a safe, minimal assumption.
+9. Before destructive actions, ask for confirmation.
+10. Keep responses concise.
+
+---
+
+## Token Economy Rules
+
+Context is a limited resource.
+
+Before reading files:
+- Identify the smallest likely file set.
+- Use targeted search before opening files.
+- Prefer exact names, errors, routes, imports, symbols, and test names.
+- Avoid broad repository scans unless narrow search fails.
+
+Avoid reading unless required:
+- dependency folders
+- build outputs
+- generated files
+- coverage reports
+- lockfiles
+- minified files
+- large snapshots
+
+Do not summarize large files unless asked.
+
+When context grows too large:
+- summarize durable decisions,
+- list changed files,
+- list checks run,
+- list unresolved risks,
+- suggest compacting the session.
+
+---
+
+## Work Protocol
+
+For non-trivial tasks, use this sequence:
+
+1. Understand the request.
+2. Inspect only necessary files.
+3. Create a short plan.
+4. Make the minimal change.
+5. Run the smallest useful validation.
+6. Report concise results.
+
+For trivial tasks, act directly.
+
+Planning format:
+
+```txt
+Plan:
+- Goal:
+- Files:
+- Change:
+- Check:
