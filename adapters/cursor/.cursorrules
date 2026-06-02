@@ -1,0 +1,25 @@
+# Cursor Rules — {{NAME}}
+
+## Project
+- Name: {{NAME}}
+- Type: {{TYPE}}
+- Stack: {{LANGUAGE}} / {{FRAMEWORK}} / {{PKG_MANAGER}}
+- Tests: {{TEST_RUNNER}}
+- Goal: {{GOAL}}
+
+## Rules
+- Solve current task only. No unrelated refactors or cleanup.
+- Smallest safe change. Prefer boring over clever.
+- Do not add dependencies unless the task requires it.
+- Prefer existing patterns and utilities over new abstractions.
+- Ask before any destructive action (delete, force-push, drop table).
+- Keep responses concise. No trailing summaries.
+
+## File reading
+- Search before opening. Use exact symbol/route/error names.
+- Skip: node_modules, dist, .next, build, coverage, lockfiles.
+
+## Docs
+- `docs/ai/COMMANDS.md` — commands
+- `docs/ai/CONTEXT.md` — architecture
+- `docs/ai/TASK_LOG.md` — session state

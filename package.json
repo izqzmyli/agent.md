@@ -1,0 +1,19 @@
+{
+  "name": "agent-md",
+  "version": "1.0.0",
+  "description": "Universal AI coding instructions initializer",
+  "bin": {
+    "agent-md": "./bin/init.js"
+  },
+  "files": [
+    "bin",
+    "adapters",
+    "docs"
+  ],
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
